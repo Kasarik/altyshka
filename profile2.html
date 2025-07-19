@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Катя - Altushka Dating</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #ff3366;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #ff3366;
+        }
+        
+        .back-button {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            color: #ff3366;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        
+        .profile-container {
+            max-width: 800px;
+            margin: 30px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .profile-photo {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .profile-photo img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 51, 102, 0.3);
+        }
+        
+        .profile-info {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .profile-name {
+            font-size: 2em;
+            color: #ff3366;
+            margin-bottom: 10px;
+        }
+        
+        .profile-age, .profile-city {
+            font-size: 1.2em;
+            color: #ccc;
+            margin: 5px 0;
+        }
+        
+        .profile-bio {
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        
+        .profile-interests {
+            margin-top: 20px;
+        }
+        
+        .interest-tag {
+            display: inline-block;
+            background-color: #ff3366;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .contact-button {
+            display: inline-block;
+            background-color: #ff3366;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-button:hover {
+            background-color: #ff6699;
+        }
+        
+        footer {
+            background-color: #000;
+            padding: 15px;
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-button">← Назад</a>
+        <h1>Altushka Dating</h1>
+    </header>
+    
+    <div class="profile-container">
+        <div class="profile-photo">
+            <img src="parad.jfif" alt="Катя">
+        </div>
+        
+        <div class="profile-info">
+            <h2 class="profile-name">Катя</h2>
+            <p class="profile-age">19 года</p>
+            <p class="profile-city">Санкт-Питербург</p>
+            
+            <div class="profile-bio">
+                <p>Привет! Я Катя, увлекаюсь готической культурой, пост-панком и всем, что связано с темной эстетикой. Люблю посещать концерты, особенно в небольших клубах с атмосферой.</p>
+                <p>Работаю графическим дизайнером, поэтому ценю креативность и нестандартное мышление. В свободное время пишу рассказы в жанре хоррор и коллекционирую виниловые пластинки.</p>
+                <p>Ищу того, кто разделит мои интересы и сможет поддержать интересную беседу. Важно, чтобы ты уважал мое пространство и независимость.</p>
+            </div>
+            
+            <div class="profile-interests">
+                <h3>Интересы:</h3>
+                <span class="interest-tag">Готика</span>
+                <span class="interest-tag">Пост-панк</span>
+                <span class="interest-tag">Литература</span>
+                <span class="interest-tag">Винил</span>
+                <span class="interest-tag">Хоррор</span>
+                <span class="interest-tag">Фотография</span>
+            </div>
+            
+            <a href="#" class="contact-button">Написать Лере</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 Altushka Dating. Все права защищены.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altushka Dating - Знакомства с альтернативными девушками</title>
+    
+    <!-- PWA Обязательные мета-теги -->
+    <meta name="theme-color" content="#ff3366">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Иконка для iOS -->
+    <link rel="apple-touch-icon" href="icon-192x192.png">
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #ff3366;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ff3366;
+        }
+        
+        .tagline {
+            font-style: italic;
+            color: #aaa;
+        }
+        
+        .profiles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        
+        .profile-card {
+            width: 250px;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        .profile-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 51, 102, 0.5);
+        }
+        
+        .profile-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .profile-info {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .profile-name {
+            font-size: 1.3em;
+            margin: 0;
+            color: #ff3366;
+        }
+        
+        .profile-age, .profile-city {
+            margin: 5px 0;
+            color: #ccc;
+        }
+        
+        footer {
+            background-color: #000;
+            padding: 15px;
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Altushka</h1>
+        <p class="tagline">Найди свою альтернативную половинку</p>
+    </header>
+    
+    <div class="profiles">
+        <!-- Карточка профиля 1 -->
+        <div class="profile-card" onclick="window.location.href='profile1.html'">
+            <img src="sonya.jpg" alt="Альтушка 1" class="profile-img">
+            <div class="profile-info">
+                <h3 class="profile-name">Соня</h3>
+                <p class="profile-age">22 года</p>
+                <p class="profile-city">Москва</p>
+            </div>
+        </div>
+        
+        <!-- Карточка профиля 2 -->
+        <div class="profile-card" onclick="window.location.href='profile2.html'">
+            <img src="parad.jfif" alt="Альтушка 2" class="profile-img">
+            <div class="profile-info">
+                <h3 class="profile-name">Катя</h3>
+                <p class="profile-age">19 лет</p>
+                <p class="profile-city">Санкт-Петербург</p>
+            </div>
+        </div>
+        
+        <!-- Карточка профиля 3 -->
+        <div class="profile-card" onclick="window.location.href='profile3.html'">
+            <img src="al1.jpg" alt="Альтушка 3" class="profile-img">
+            <div class="profile-info">
+                <h3 class="profile-name">Маша</h3>
+                <p class="profile-age">25 лет</p>
+                <p class="profile-city">Екатеринбург</p>
+            </div>
+        </div>
+        
+        <!-- Карточка профиля 4 -->
+        <div class="profile-card" onclick="window.location.href='profile4.html'">
+            <img src="al2.jpg" alt="Альтушка 4" class="profile-img">
+            <div class="profile-info">
+                <h3 class="profile-name">Аня</h3>
+                <p class="profile-age">23 года</p>
+                <p class="profile-city">Киев</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 Altushka Dating. Все права защищены.</p>
+    </footer>
+	
+</body>
+</html>

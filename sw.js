@@ -1,23 +1,43 @@
+// Название кэша (версия для обновлений)
 const CACHE_NAME = 'altushka-v1';
-const ASSETS = [
+
+// Файлы, которые нужно кэшировать
+const FILES_TO_CACHE = [
   '/',
   '/index.html',
   '/styles.css',
-  '/script.js',
+  '/app.js',
   '/icon-192x192.png',
   '/icon-512x512.png'
 ];
 
-// Кэшируем файлы при установке
-self.addEventListener('install', (e) => {
-  e.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
+// 1. Установка Service Worker и кэширование файлов
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(FILES_TO_CACHE))
   );
 });
 
-// Отдаём файлы из кэша (если нет сети)
-self.addEventListener('fetch', (e) => {
-  e.respondWith(
-    caches.match(e.request).then((response) => response || fetch(e.request))
+// 2. Активация (очистка старого кэша)
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) => {
+      return Promise.all(
+        keys.map((key) => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key); // Удаляем старые версии
+          }
+        })
+      );
+    })
+  );
+});
+
+// 3. Перехват запросов (работа оффлайн)
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => response || fetch(event.request))
   );
 });
